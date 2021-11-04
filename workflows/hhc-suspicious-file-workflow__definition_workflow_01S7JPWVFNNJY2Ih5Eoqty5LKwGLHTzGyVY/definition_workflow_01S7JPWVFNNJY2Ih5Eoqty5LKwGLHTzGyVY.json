@@ -1,0 +1,2292 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY",
+    "name": "dagraff HHC Suspicious File Workflow (restructured)",
+    "title": "dagraff HHC Suspicious File Workflow (restructured)",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Crowdstrike Retrieved Detect Summaries",
+          "type": "datatype.string",
+          "description": "The Crowdstrike Detects summary ",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S86GVCG8WI12iRCttYkLuEPsdmD0NtdBk",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "Total Detections",
+          "type": "datatype.integer",
+          "description": "The total number of Crowdstrike Detections.",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SB2E9P7TDFG7BoAIXgYrmUB7ux0LnUUN7",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Y2lzY29zcGFyazovL3VzL1JPT00vMWFlYTNkZjAtMzAxOC0xMWVjLTkwYWUtMjk5MGM3NzQ4MTAz",
+          "scope": "local",
+          "name": "Webex Suspicious File Bot Room ID",
+          "type": "datatype.string",
+          "description": "The Webex Bot Room Id",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S8DP03RCS554goE2Yzk5enWo6TCfS58EX",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "Total Clean Detections",
+          "type": "datatype.integer",
+          "description": "The total number of Intel Sources clean detections.",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SB2E3OBOAMT7G6yeDbbzzZdJZsDzMhORR",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 10,
+          "scope": "local",
+          "name": "Crowdstrike Detects Horizon In Minutes",
+          "type": "datatype.integer",
+          "description": "Length in minutes of Crowdstrike Detects",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S859G2MY06L7bCS2s2XjHgnHtxmgbgnBZ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "Total TheHive Cases",
+          "type": "datatype.integer",
+          "description": "The total number of TheHive cases opened.",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SB2ER0Q73FH4Xxfoa0FGAfsgMC1rhS9r8",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "A Crowdstrike Suspicious File Event was detected and deemed {verdict}\\\\n\\\\nCreated: {created_timestamp}\\\\n\\\\nDetect ID: {detect_id}\\\\n\\\\nDevice Information:\\\\n* Device ID: {device_id}\\\\n* Hostname: {hostname}\\\\n* OS Version: {os_version}\\\\n* IP: {local_ip} (local ip) / {external_ip} (external_ip)\\\\n",
+          "scope": "local",
+          "name": "TheHive Message Template",
+          "type": "datatype.string",
+          "description": "The message template that is going to be use as the description of the case.",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S8CNZ4MA4CX72vvtAXA8PFIxHJTjVSDNm",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 10,
+          "scope": "local",
+          "name": "Crowdstrike Detects Limit",
+          "type": "datatype.integer",
+          "description": "Limit the number of Detects from Crowdstrike",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S85BR7VX2PW7EXYoL3jLrfuOkTbwIflpy",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "Total Unknown Detections",
+          "type": "datatype.integer",
+          "description": "The total number of unknown detections.",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SB2EWC0KLN76xqzkZbxWYLHu90YvfaoA3",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "Total Malicious Detections",
+          "type": "datatype.integer",
+          "description": "The total number of malicious or suspicious detections.",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SB2EIFYKGE161WK4AvLwnJUvIv42bCkxN",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Crowdstrike Retreived Detects",
+          "type": "datatype.string",
+          "description": "The Detects ldts.",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S85LBG2YVYV43U0jYddqFedS0b0aLKxWJ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "A Crowdstrike Suspicious File Event was detected and deemed **{verdict}**\n\nCreated: {created_timestamp}  \nDetect ID: {detect_id}  \nDevice Information:\n\n* Device ID: {device_id}\n* Hostname: {hostname}\n* OS Version: {os_version}\n* IP: {local_ip} (local ip) / {external_ip} (external_ip)\n\n",
+          "scope": "local",
+          "name": "Webex Message Template",
+          "type": "datatype.string",
+          "description": "Message describing the verdict on a Crowdstrike Detect",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S8C7JU7GTQC3q9cSN3REuP3984IYdUgKs",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Intel Verdicts",
+          "type": "datatype.string",
+          "description": "The Intelligence Source final verdict \u003cClean|Malcious|Unknown\u003e",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Statistics",
+          "type": "datatype.string",
+          "description": "The summary statistics of the workflow:\n\n[]Amount of detections\n[]Clean detections\n[]Malicious detections\n[]Unknown detections\n[]TheHive cases opened",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SB2K6P3H31K6zy5OK2yTjrQU5DcBaVWXh",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "*****",
+          "scope": "local",
+          "name": "Webex Suspicious File Bot Access Token",
+          "type": "datatype.secure_string",
+          "description": "The Webex Bot Access Token",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S85A6B6ERBG6mw3rhRYed2F17VRm1McBp",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": false,
+          "scope": "local",
+          "name": "Crowdstrike Detects Use Time Horizon",
+          "type": "datatype.boolean",
+          "description": "Toggle to use Time Horizon or simple limit",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01S85B0C6Q40Q4CuVCe8a3GOzt1EuotTwoR",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "HHC Development Workspace",
+          "scope": "local",
+          "name": "Webex Suspicious File Bot Room Name",
+          "type": "datatype.string",
+          "description": "The Webex Bot Room Name to post the notification to.",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01SBK90F2YOWS18fj8UFJN6aobyZHAIgKkY",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "This workflow retrieves Crowdstrike Detects in a configurable time horizon (10 minutes by default) and investigate each one to get a final verdict.\n\nA Webex Teams message is posted to notify an administrator with the investigation details about each verdict and a TheHive case is opened for Malicious, Suspicious and Unknown verdicts to take further action.\n\nTargets used:  HHC Crowdstrike API, Cisco Threat Response API, TheHive API, Webex Teams API\n\nSteps:\n[] Get Crowdstrike Detects in configurable time horizon.\n[] Investigate each Detect.\n[] Determine a final verdict for each Detect\n[] Post a Webex Teams message with investigation details for each Detect.\n[] Open a TheHive case for each Detect if the final verdict is Malicious, Suspicious or Unknown.\n",
+      "display_name": "dagraff HHC Suspicious File Workflow (restructured)",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01S7K42IZ3SQB6qPZDLPJP9PnDZj7lsGzom",
+        "name": "Group",
+        "title": "Interact with Crowdstrike",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Interact with Crowdstrike",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01S84V0IKR0FB6HfnYBtVcGfigLsH5Q6STF",
+            "name": "Group",
+            "title": "Authenticate Crowdstrike",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Authenticate Crowdstrike",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01S84XGE9WWNU4NrK9RtnQi6CyEPhbiItq0",
+                "name": "HTTP Request",
+                "title": "Get Crowdstrike OAuth2 Access Token",
+                "type": "web-service.http_request",
+                "base_type": "activity",
+                "properties": {
+                  "accept": "application/json",
+                  "action_timeout": 180,
+                  "allow_auto_redirect": true,
+                  "body": "grant_type=client_credentials",
+                  "continue_on_error_status_code": false,
+                  "continue_on_failure": false,
+                  "custom_headers": [
+                    {
+                      "name": "Content-Type",
+                      "value": "application/x-www-form-urlencoded"
+                    }
+                  ],
+                  "display_name": "Get Crowdstrike OAuth2 Access Token",
+                  "method": "POST",
+                  "relative_url": "/oauth2/token",
+                  "runtime_user": {
+                    "override_target_runtime_user": true,
+                    "runtime_user_id": "definition_runtime_user_01S2E7LAP69WI2uZApfilzLhehIBL0psww9"
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target": true,
+                    "target_id": "definition_target_01S2E5QKUU0HW1gK2tosEknKKpL75HqjB6Q"
+                  }
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01S84ZBH3P9JD1NJJfSAX4JrApmmZWahVlH",
+                "name": "JSONPath Query",
+                "title": "Extract Crowdstrike OAuth2 Access Token",
+                "type": "corejava.jsonpathquery",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Extract Crowdstrike OAuth2 Access Token",
+                  "input_json": "$activity.definition_activity_01S84XGE9WWNU4NrK9RtnQi6CyEPhbiItq0.output.response_body$",
+                  "jsonpath_queries": [
+                    {
+                      "jsonpath_query": "$.access_token",
+                      "jsonpath_query_name": "Crowdstrike Access Token",
+                      "jsonpath_query_type": "secure_string"
+                    },
+                    {
+                      "jsonpath_query": "$.expires_in",
+                      "jsonpath_query_name": "Crowdstrike Token Expires In",
+                      "jsonpath_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01S7JR59LIYUF7jgsDJcnm11Z9v8XO2yulP",
+            "name": "Group",
+            "title": "Retrieve Crowdstrike Detects",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Retrieve Crowdstrike Detects",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01S85BZMT0LP50xekl5Rs8xDYufxLoXrP7J",
+                "name": "Condition Block",
+                "title": "Retrieve Crowdstrike Detects on Time Horizon or Limit?",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Retrieve Crowdstrike Detects on Time Horizon or Limit?",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01S85BZMZYHMC2qY1XOkQm7j7nPaSOCojDk",
+                    "name": "Condition Branch",
+                    "title": "Retrieve Crowdstrike Detects (time horizon)",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85B0C6Q40Q4CuVCe8a3GOzt1EuotTwoR$",
+                        "operator": "eq",
+                        "right_operand": true
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Retrieve Crowdstrike Detects (time horizon)",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01S87N8ZI20MQ7RFf5cYLBrkjCublxRyrbM",
+                        "name": "Execute Python Script",
+                        "title": "Compute Time Horizon",
+                        "type": "python3.script",
+                        "base_type": "activity",
+                        "properties": {
+                          "action_timeout": 180,
+                          "continue_on_failure": false,
+                          "display_name": "Compute Time Horizon",
+                          "script": "import sys\nfrom datetime import datetime, timezone, timedelta\n\ndetects_horizon_minutes = int(sys.argv[1])\n\nhorizon_end = datetime.utcnow()\ndelta = timedelta(minutes=int(detects_horizon_minutes))\nhorizon_begin = horizon_end - delta\n\nhorizon_begin_str = f'{horizon_begin.isoformat()}Z'\nhorizon_end_str = f'{horizon_end.isoformat()}Z'",
+                          "script_arguments": [
+                            "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S859G2MY06L7bCS2s2XjHgnHtxmgbgnBZ$"
+                          ],
+                          "script_queries": [
+                            {
+                              "script_query": "horizon_begin_str",
+                              "script_query_name": "Crowdstrike Detect Horizon Begin",
+                              "script_query_type": "string"
+                            },
+                            {
+                              "script_query": "horizon_end_str",
+                              "script_query_name": "Crowdstrike Detect Horizon End",
+                              "script_query_type": "string"
+                            }
+                          ],
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01S85HEW7BFBK1RkjC3cR9zxKbQXAq2DgWf",
+                        "name": "HTTP Request",
+                        "title": "Get Crowdstrike Detects (time horizon)",
+                        "type": "web-service.http_request",
+                        "base_type": "activity",
+                        "properties": {
+                          "action_timeout": 180,
+                          "allow_auto_redirect": true,
+                          "continue_on_error_status_code": false,
+                          "continue_on_failure": false,
+                          "custom_headers": [
+                            {
+                              "name": "Authorization",
+                              "value": "Bearer $activity.definition_activity_01S84ZBH3P9JD1NJJfSAX4JrApmmZWahVlH.output.jsonpath_queries.Crowdstrike Access Token$"
+                            }
+                          ],
+                          "display_name": "Get Crowdstrike Detects (time horizon)",
+                          "method": "GET",
+                          "relative_url": "/detects/queries/detects/v1?filter=first_behavior:\u003e='$activity.definition_activity_01S87N8ZI20MQ7RFf5cYLBrkjCublxRyrbM.output.script_queries.Crowdstrike Detect Horizon Begin$'",
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "override_workflow_target": true,
+                            "target_id": "definition_target_01S2E5QKUU0HW1gK2tosEknKKpL75HqjB6Q"
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01S85V4TX821Q0BNdW23KkZk68S57RVx77w",
+                        "name": "Set Variables",
+                        "title": "Set Crowdstrike Retrieved Detects (time horizon)",
+                        "type": "core.set_multiple_variables",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Set Crowdstrike Retrieved Detects (time horizon)",
+                          "skip_execution": false,
+                          "variables_to_update": [
+                            {
+                              "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85LBG2YVYV43U0jYddqFedS0b0aLKxWJ$",
+                              "variable_value_new": "$activity.definition_activity_01S85HEW7BFBK1RkjC3cR9zxKbQXAq2DgWf.output.response_body$"
+                            }
+                          ]
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01S85BZN8XDQB1fTpfU8iGZauBtuQDDyBen",
+                    "name": "Condition Branch",
+                    "title": "Retrieve Crowdstrike Detects (limit)",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85B0C6Q40Q4CuVCe8a3GOzt1EuotTwoR$",
+                        "operator": "eq",
+                        "right_operand": false
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Retrieve Crowdstrike Detects (limit)",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01S85I3ZCFCJO6qvQDAHmN8bipTdrOwpK5t",
+                        "name": "HTTP Request",
+                        "title": "Get Crowdstrike Detects (limit)",
+                        "type": "web-service.http_request",
+                        "base_type": "activity",
+                        "properties": {
+                          "action_timeout": 180,
+                          "allow_auto_redirect": true,
+                          "continue_on_error_status_code": false,
+                          "continue_on_failure": false,
+                          "custom_headers": [
+                            {
+                              "name": "Authorization",
+                              "value": "Bearer $activity.definition_activity_01S84ZBH3P9JD1NJJfSAX4JrApmmZWahVlH.output.jsonpath_queries.Crowdstrike Access Token$"
+                            }
+                          ],
+                          "display_name": "Get Crowdstrike Detects (limit)",
+                          "method": "GET",
+                          "relative_url": "/detects/queries/detects/v1?limit=$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85BR7VX2PW7EXYoL3jLrfuOkTbwIflpy$",
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "override_workflow_target": true,
+                            "target_id": "definition_target_01S2E5QKUU0HW1gK2tosEknKKpL75HqjB6Q"
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01S85WGYVTQJ27cMiEK7qps7jE1i6Anhljq",
+                        "name": "Set Variables",
+                        "title": "Set Crowdstrike Retrieved Detects (limit)",
+                        "type": "core.set_multiple_variables",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Set Crowdstrike Retrieved Detects (limit)",
+                          "skip_execution": false,
+                          "variables_to_update": [
+                            {
+                              "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85LBG2YVYV43U0jYddqFedS0b0aLKxWJ$",
+                              "variable_value_new": "$activity.definition_activity_01S85I3ZCFCJO6qvQDAHmN8bipTdrOwpK5t.output.response_body$"
+                            }
+                          ]
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01S865WY3RBUA6Ft5oPMtrvSCgd3bemOr3d",
+                "name": "JSONPath Query",
+                "title": "Extract Crowdstrike Detects",
+                "type": "corejava.jsonpathquery",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Extract Crowdstrike Detects",
+                  "input_json": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85LBG2YVYV43U0jYddqFedS0b0aLKxWJ$",
+                  "jsonpath_queries": [
+                    {
+                      "jsonpath_query": "$.resources",
+                      "jsonpath_query_name": "Retrieved Crowdstrike Detects Resources",
+                      "jsonpath_query_type": "string"
+                    },
+                    {
+                      "jsonpath_query": "$.resources.length()",
+                      "jsonpath_query_name": "Retrieved Crowdstrike Detects Resources Count",
+                      "jsonpath_query_type": "integer"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01S864KYM3XSI73xa2GK26afi9RA4vbBAWP",
+            "name": "Group",
+            "title": "Retrieve Crowdstrike Detect Summaries",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Retrieve Crowdstrike Detect Summaries",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01S864VHFM1Q94fdv8XO6V0lcDWP3OA5civ",
+                "name": "Condition Block",
+                "title": "Were Crowdstrike Detects Found?",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Were Crowdstrike Detects Found?",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01S864VHNJE7440nQ7XMi5qrF199HYmjKcf",
+                    "name": "Condition Branch",
+                    "title": "Crowdstrike has detected resources",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01S865WY3RBUA6Ft5oPMtrvSCgd3bemOr3d.output.jsonpath_queries.Retrieved Crowdstrike Detects Resources Count$",
+                        "operator": "gt",
+                        "right_operand": 0
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Crowdstrike has detected resources",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01S8692NG3HKR6Ak914fS8aiuvrPzziFP63",
+                        "name": "HTTP Request",
+                        "title": "Get Crowdstrike Detects Summaries",
+                        "type": "web-service.http_request",
+                        "base_type": "activity",
+                        "properties": {
+                          "accept": "application/json",
+                          "action_timeout": 180,
+                          "allow_auto_redirect": true,
+                          "body": "{\n  \"ids\": $activity.definition_activity_01S865WY3RBUA6Ft5oPMtrvSCgd3bemOr3d.output.jsonpath_queries.Retrieved Crowdstrike Detects Resources$\n}",
+                          "content_type": "application/json",
+                          "continue_on_error_status_code": false,
+                          "continue_on_failure": false,
+                          "custom_headers": [
+                            {
+                              "name": "Authorization",
+                              "value": "Bearer $activity.definition_activity_01S84ZBH3P9JD1NJJfSAX4JrApmmZWahVlH.output.jsonpath_queries.Crowdstrike Access Token$"
+                            }
+                          ],
+                          "display_name": "Get Crowdstrike Detects Summaries",
+                          "method": "POST",
+                          "relative_url": "/detects/entities/summaries/GET/v1",
+                          "runtime_user": {
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "override_workflow_target": true,
+                            "target_id": "definition_target_01S2E5QKUU0HW1gK2tosEknKKpL75HqjB6Q"
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01S861YJEUSLA382ZjyDHTY8TrSP1551nLW",
+                        "name": "JSONPath Query",
+                        "title": "Filter Detect Summaries With sha256 behaviors",
+                        "type": "corejava.jsonpathquery",
+                        "base_type": "activity",
+                        "properties": {
+                          "action_timeout": 180,
+                          "continue_on_failure": false,
+                          "display_name": "Filter Detect Summaries With sha256 behaviors",
+                          "input_json": "$activity.definition_activity_01S8692NG3HKR6Ak914fS8aiuvrPzziFP63.output.response_body$",
+                          "jsonpath_queries": [
+                            {
+                              "jsonpath_query": "$.resources[?(@..ioc_type in ['sha256', 'hash_sha256'])]",
+                              "jsonpath_query_name": "Crowdstrike Filtered Detect Summaries",
+                              "jsonpath_query_type": "string"
+                            }
+                          ],
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01S86FWTXB5GY7UaejVitCGljvp1o76HRwS",
+                        "name": "Set Variables",
+                        "title": "Set Filtered Crowdstrike Detect Summaries to Variable",
+                        "type": "core.set_multiple_variables",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Set Filtered Crowdstrike Detect Summaries to Variable",
+                          "skip_execution": false,
+                          "variables_to_update": [
+                            {
+                              "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86GVCG8WI12iRCttYkLuEPsdmD0NtdBk$",
+                              "variable_value_new": "$activity.definition_activity_01S861YJEUSLA382ZjyDHTY8TrSP1551nLW.output.jsonpath_queries.Crowdstrike Filtered Detect Summaries$"
+                            }
+                          ]
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01S864VHV3VOJ1vglaXamNMUyr6rShBXLAT",
+                    "name": "Condition Branch",
+                    "title": "Crowdstrike has not detected resources",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01S865WY3RBUA6Ft5oPMtrvSCgd3bemOr3d.output.jsonpath_queries.Retrieved Crowdstrike Detects Resources Count$",
+                        "operator": "eq",
+                        "right_operand": 0
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Crowdstrike has not detected resources",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01S868R5CSGGX02EZjwtZkykMMtqsd7AlHr",
+                        "name": "Completed",
+                        "title": "Execution Completed - No Detects Found",
+                        "type": "logic.completed",
+                        "base_type": "activity",
+                        "properties": {
+                          "completion_type": "succeeded",
+                          "continue_on_failure": false,
+                          "display_name": "Execution Completed - No Detects Found",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01S7K1MRVDCIO39soQ1svU4ImwuMI9BUMDQ",
+        "name": "Group",
+        "title": "Process Crowdstrike Detection Summaries",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Process Crowdstrike Detection Summaries",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01S86B6H7TDBZ3iUSPUc2dVC8NH92KvqmnK",
+            "name": "Read Table from JSON",
+            "title": "Read Crowdstrike Summaries to Table",
+            "type": "corejava.read_table_from_json",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Read Crowdstrike Summaries to Table",
+              "input_json": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86GVCG8WI12iRCttYkLuEPsdmD0NtdBk$",
+              "jsonpath_query": "$.[*]",
+              "persist_output": true,
+              "populate_columns": false,
+              "skip_execution": false,
+              "table_columns": [
+                {
+                  "column_name": "detection_id",
+                  "column_type": "string"
+                },
+                {
+                  "column_name": "created_timestamp",
+                  "column_type": "string"
+                },
+                {
+                  "column_name": "behaviors",
+                  "column_type": "string"
+                },
+                {
+                  "column_name": "device",
+                  "column_type": "string"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP",
+            "name": "For Each",
+            "title": "For Each Crowdstrike Summary",
+            "type": "logic.for_each",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "For Each Crowdstrike Summary",
+              "skip_execution": false,
+              "source_array": "$activity.definition_activity_01S86B6H7TDBZ3iUSPUc2dVC8NH92KvqmnK.output.read_table_from_json$"
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5",
+                "name": "JSONPath Query",
+                "title": "Capture Device Information",
+                "type": "corejava.jsonpathquery",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Capture Device Information",
+                  "input_json": "$activity.definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP.input.source_array[@].device$",
+                  "jsonpath_queries": [
+                    {
+                      "jsonpath_query": "$.device_id",
+                      "jsonpath_query_name": "device_id",
+                      "jsonpath_query_type": "string"
+                    },
+                    {
+                      "jsonpath_query": "$.external_ip",
+                      "jsonpath_query_name": "external_ip",
+                      "jsonpath_query_type": "string"
+                    },
+                    {
+                      "jsonpath_query": "$.local_ip",
+                      "jsonpath_query_name": "local_ip",
+                      "jsonpath_query_type": "string"
+                    },
+                    {
+                      "jsonpath_query": "$.os_version",
+                      "jsonpath_query_name": "os_version",
+                      "jsonpath_query_type": "string"
+                    },
+                    {
+                      "jsonpath_query": "$.hostname",
+                      "jsonpath_query_name": "hostname",
+                      "jsonpath_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01S86KXKLC7086QupzMbPYRI2t3ilirV3zy",
+                "name": "Read Table from JSON",
+                "title": "Read Detection Summary Behaviors to Table",
+                "type": "corejava.read_table_from_json",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Read Detection Summary Behaviors to Table",
+                  "input_json": "$activity.definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP.input.source_array[@].behaviors$",
+                  "jsonpath_query": "$.[*]",
+                  "persist_output": false,
+                  "populate_columns": false,
+                  "skip_execution": false,
+                  "table_columns": [
+                    {
+                      "column_name": "filename",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "filepath",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "ioc_description",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "ioc_source",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "ioc_type",
+                      "column_type": "string"
+                    },
+                    {
+                      "column_name": "ioc_value",
+                      "column_type": "string"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01S86PZN3BDJG59pvpHL2qhwDOFumxqXx3i",
+                "name": "For Each",
+                "title": "For Each Detected Behavior",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "For Each Detected Behavior",
+                  "skip_execution": false,
+                  "source_array": "$activity.definition_activity_01S86KXKLC7086QupzMbPYRI2t3ilirV3zy.output.read_table_from_json$"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01S86QG4U1HCX7X4slMKiTCXRG0j20cciff",
+                    "name": "Parallel Block",
+                    "title": "Interact with Intel Sources",
+                    "type": "logic.parallel",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Interact with Intel Sources",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01S86QG50IP7K1UoKFIc1Pz9urAEM7UZzzE",
+                        "name": "Parallel Branch",
+                        "title": "Interact with Cisco Threat Response",
+                        "type": "logic.parallel_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Interact with Cisco Threat Response",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S86RBDW9F4C7VT4iaBeC5h0zV2qHp8FYD",
+                            "name": "Threat Response - Generate Access Token",
+                            "title": "Threat Response - Generate Access Token",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Generate Access Token",
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target": true,
+                                "target_id": "definition_target_01S36WOCOGKNS5ZkcNXP0gkbm0ISZN6dAMQ",
+                                "target_type": "web-service.endpoint"
+                              },
+                              "workflow_id": "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01S86RM5AB1TI1D9256GgsMG1OZ22SvlzPM",
+                            "name": "Threat Response - Deliberate Observable",
+                            "title": "Threat Response - Deliberate Observable",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Deliberate Observable",
+                              "input": {
+                                "variable_workflow_01PP77MLJ2S465LuOvU8mlP8mbbcgy9uTXN": "sha256",
+                                "variable_workflow_01PP77MLJ2XIE1H3D67PjcsCuGBsKCCBxLI": "$activity.definition_activity_01S86RBDW9F4C7VT4iaBeC5h0zV2qHp8FYD.output.variable_workflow_01PP75S3G7CJY6WAQr2IJC7qga2SIoE09gQ$",
+                                "variable_workflow_01PP77MLJ2ZVU1C4VxEfKYh2tlFk9iTx69p": "$activity.definition_activity_01S86PZN3BDJG59pvpHL2qhwDOFumxqXx3i.input.source_array[@].ioc_value$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target": true,
+                                "target_id": "definition_target_01S35IANTGTZP5pT0bcdtXK88fgkexVq9Id",
+                                "target_type": "web-service.endpoint"
+                              },
+                              "workflow_id": "definition_workflow_01PP77MLQ4QAG765OwlT0ZDqBzv80HvYuPC"
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01S96LA4HPGCV6mjI1LoCvtnRHlvLmfxvot",
+                        "name": "Parallel Branch",
+                        "title": "Observe Observables (deadend)",
+                        "type": "logic.parallel_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Observe Observables (deadend)",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S96LI5708R54zic5iQ0P7M0Xjturh87w8",
+                            "name": "Threat Response - Generate Access Token",
+                            "title": "Threat Response - Generate Access Token",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Threat Response - Generate Access Token",
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target": true,
+                                "target_id": "definition_target_01S36WOCOGKNS5ZkcNXP0gkbm0ISZN6dAMQ",
+                                "target_type": "web-service.endpoint"
+                              },
+                              "workflow_id": "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01S96LNMMVPE61WUkJuhRgXxz1LxvUL5lYM",
+                            "name": "HTTP Request",
+                            "title": "Threat Response - Observe Observables",
+                            "type": "web-service.http_request",
+                            "base_type": "activity",
+                            "properties": {
+                              "accept": "application/json",
+                              "action_timeout": 180,
+                              "allow_auto_redirect": true,
+                              "body": "[\n  {\n    \"type\": \"sha256\",\n    \"value\": \"$activity.definition_activity_01S86PZN3BDJG59pvpHL2qhwDOFumxqXx3i.input.source_array[@].ioc_value$\"\n  }\n]",
+                              "content_type": "application/json",
+                              "continue_on_error_status_code": false,
+                              "continue_on_failure": false,
+                              "custom_headers": [
+                                {
+                                  "name": "Authorization",
+                                  "value": "Bearer $activity.definition_activity_01S96LI5708R54zic5iQ0P7M0Xjturh87w8.output.variable_workflow_01PP75S3G7CJY6WAQr2IJC7qga2SIoE09gQ$"
+                                }
+                              ],
+                              "display_name": "Threat Response - Observe Observables",
+                              "method": "POST",
+                              "relative_url": "/iroh-enrich/observe/observables",
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "override_workflow_target": true,
+                                "target_id": "definition_target_01S35IANTGTZP5pT0bcdtXK88fgkexVq9Id"
+                              }
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01S88EJ8PNJVE2vbIgXhMuRMr28H299tQa1",
+                    "name": "Set Variables",
+                    "title": "Gather Intel Verdicts",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Gather Intel Verdicts",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                          "variable_value_new": "[ '$activity.definition_activity_01S86RM5AB1TI1D9256GgsMG1OZ22SvlzPM.output.variable_workflow_01PP77MLJ2W9N3jUUa3J6gIRy7Dydhs937R$' ]"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01S88GBCKBB9M7ZfvgO9MSmzsgIoufEiIcE",
+                    "name": "To Lower",
+                    "title": "Convert verdicts to lower case",
+                    "type": "core.string2lower",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Convert verdicts to lower case",
+                      "skip_execution": false,
+                      "source": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$"
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01S88GVTSI0A24sFR6yiR385gZ97JWjj9FS",
+                    "name": "Condition Block",
+                    "title": "Determine final Intel Verdict",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Determine final Intel Verdict",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01S88GVU06JRA4tChxzFnaGIenQncFAlGqX",
+                        "name": "Condition Branch",
+                        "title": "Clean",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01S88GBCKBB9M7ZfvgO9MSmzsgIoufEiIcE.output.lowercase_text$",
+                            "operator": "mw",
+                            "right_operand": "*clean*"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Clean",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S88HU1NPPHN7Dni560Pdi4lNgT2avKo4K",
+                            "name": "Set Variables",
+                            "title": "Set Intel Verdict",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Intel Verdict",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                                  "variable_value_new": "Clean"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01S88I8T8X7NE2gcETWFXNsPYIsrFptHy1M",
+                        "name": "Condition Branch",
+                        "title": "Malicious",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01S88GBCKBB9M7ZfvgO9MSmzsgIoufEiIcE.output.lowercase_text$",
+                            "operator": "mw",
+                            "right_operand": "*malicious*"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Malicious",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S88I8T8XWVV5ebLZqiXJimlmXjzEG8LjM",
+                            "name": "Set Variables",
+                            "title": "Set Intel Verdict",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Intel Verdict",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                                  "variable_value_new": "Malicious"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01S88ILWO6ZYA2s0olrgEfcPLnlMvH9GRQK",
+                        "name": "Condition Branch",
+                        "title": "Suspicous",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01S88GBCKBB9M7ZfvgO9MSmzsgIoufEiIcE.output.lowercase_text$",
+                            "operator": "mw",
+                            "right_operand": "*suspicious*"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Suspicous",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S88ILWO7THH1rzx6cRYAtr3U4as1KMqfb",
+                            "name": "Set Variables",
+                            "title": "Set Intel Verdict",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Intel Verdict",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                                  "variable_value_new": "Suspicious"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01S88J3T9BZ7B1CelWavXjJXEdJzAUbAGP9",
+                        "name": "Condition Branch",
+                        "title": "Unknown",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01S88GBCKBB9M7ZfvgO9MSmzsgIoufEiIcE.output.lowercase_text$",
+                            "operator": "mw",
+                            "right_operand": "*unknown*"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Unknown",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S88J3T9CKZG2fww3J57RZSie9XZLBIJaw",
+                            "name": "Set Variables",
+                            "title": "Set Intel Verdict",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Set Intel Verdict",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                                  "variable_value_new": "Unknown"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01S8CN0TRU6XC3IdPyqDBoZuWKJakDbkNU7",
+                    "name": "Parallel Block",
+                    "title": "Format Messages",
+                    "type": "logic.parallel",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Format Messages",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01S8CN0U1C4LU6mUJMpvHAeyBlZiJp0TQFK",
+                        "name": "Parallel Branch",
+                        "title": "Webex",
+                        "type": "logic.parallel_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "Webex",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S8CBD3NJJ5E3qX2hyN8AiiSPrTEViHh3k",
+                            "name": "Execute Python Script",
+                            "title": "Format Webex Message",
+                            "type": "python3.script",
+                            "base_type": "activity",
+                            "properties": {
+                              "action_timeout": 180,
+                              "continue_on_failure": false,
+                              "display_name": "Format Webex Message",
+                              "script": "import sys\n\nverdict, created_timestamp, detect_id, device_id, hostname, \\\n  os_version, local_ip, external_ip = sys.argv[1:]\n\n# verdict = '$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$'\n# created_timestamp = '$activity.definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP.input.source_array[@].created_timestamp$'\n# detect_id = '$activity.definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP.input.source_array[@].detection_id$'\n# device_id = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.device_id$'\n# hostname = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.hostname$'\n# os_version = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.os_version$'\n# local_ip = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.local_ip$'\n# external_ip = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.external_ip$'\n\nwebex_formatted_message = f'''$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S8C7JU7GTQC3q9cSN3REuP3984IYdUgKs$'''\n",
+                              "script_arguments": [
+                                "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                                "$activity.definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP.input.source_array[@].created_timestamp$",
+                                "$activity.definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP.input.source_array[@].detection_id$",
+                                "$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.device_id$",
+                                "$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.hostname$",
+                                "$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.os_version$",
+                                "$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.local_ip$",
+                                "$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.external_ip$"
+                              ],
+                              "script_queries": [
+                                {
+                                  "script_query": "webex_formatted_message",
+                                  "script_query_name": "webex_formatted_message",
+                                  "script_query_type": "string"
+                                }
+                              ],
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01S8CN0UD3JDX5k0Hkh7SY9zMcLEkHecxfN",
+                        "name": "Parallel Branch",
+                        "title": "TheHive",
+                        "type": "logic.parallel_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "continue_on_failure": false,
+                          "display_name": "TheHive",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S8CN4KZ9B0J5vsfLvKzdvwfMf0oB9FDdD",
+                            "name": "Execute Python Script",
+                            "title": "Format TheHive Message",
+                            "type": "python3.script",
+                            "base_type": "activity",
+                            "properties": {
+                              "action_timeout": 180,
+                              "continue_on_failure": false,
+                              "display_name": "Format TheHive Message",
+                              "script": "verdict = '$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$'\ncreated_timestamp = '$activity.definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP.input.source_array[@].created_timestamp$'\ndetect_id = '$activity.definition_activity_01S7K4VC0W41F7BMtX4gGavueEdp34bJqNP.input.source_array[@].detection_id$'\ndevice_id = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.device_id$'\nhostname = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.hostname$'\nos_version = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.os_version$'\nlocal_ip = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.local_ip$'\nexternal_ip = '$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.external_ip$'\n\nthehive_formatted_message = f'''$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S8CNZ4MA4CX72vvtAXA8PFIxHJTjVSDNm$'''\n",
+                              "script_queries": [
+                                {
+                                  "script_query": "thehive_formatted_message",
+                                  "script_query_name": "thehive_formatted_message",
+                                  "script_query_type": "string"
+                                }
+                              ],
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01S8DLQEB0RQ82glOQkT7aL2gZAYspiVgZo",
+                    "name": "Condition Block",
+                    "title": "Respond to Verdict",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Respond to Verdict",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01S8DLQEJF6FO7gRhskDarNeiQbCstUS7YX",
+                        "name": "Condition Branch",
+                        "title": "Clean Verdict",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                            "operator": "eq",
+                            "right_operand": "Clean"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Clean Verdict",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01SBK9DJ7CPJD2baqjTQdrCN3R2Iv6CNbYd",
+                            "name": "Group",
+                            "title": "Send notification to IR Team",
+                            "type": "logic.group",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Send notification to IR Team",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01SBK9PZNBDL56GWOsZIgmzACJ2eUK5trmH",
+                                "name": "Condition Block",
+                                "title": "Was Webex Room Provided?",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Was Webex Room Provided?",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01SBK9PZUYTFO6WCZExvM55eV5NRRnIGRzt",
+                                    "name": "Condition Branch",
+                                    "title": "Room Name was Provided",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SBK90F2YOWS18fj8UFJN6aobyZHAIgKkY$",
+                                        "operator": "ne",
+                                        "right_operand": ""
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "Room Name was Provided",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01SBKCBF72Q7N0noFHqs1FaS9DGdV78V75j",
+                                        "name": "Webex Teams - Search for Room",
+                                        "title": "Webex Teams - Search for Room",
+                                        "type": "workflow.atomic_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Webex Teams - Search for Room",
+                                          "input": {
+                                            "variable_workflow_01PP790MCX1DN3EitpQebkUyJS65DbwS3nU": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85A6B6ERBG6mw3rhRYed2F17VRm1McBp$",
+                                            "variable_workflow_01PP790MCXB392D3R8pxh9fgOTjTde2bcMW": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SBK90F2YOWS18fj8UFJN6aobyZHAIgKkY$",
+                                            "variable_workflow_01PP790MCXHP55YE6ylOEITWsWbUFJeyWGv": "",
+                                            "variable_workflow_01PP790MCXM9W1MUwo85y8iNRCoQuQ4RGNa": ""
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "override_workflow_target": true,
+                                            "target_id": "definition_target_01MGSJSDFBYFA3JxQSJVh0cj5dg0lSuHY81",
+                                            "target_type": "web-service.endpoint"
+                                          },
+                                          "workflow_id": "definition_workflow_01PP790MKJNWV6XyJuLdUyNlM2UV3JJACez"
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01SBKCO6YI8JT6zCKWA4DLLwqf1Ipyxewum",
+                                        "name": "Condition Block",
+                                        "title": "Did we find the room?",
+                                        "type": "logic.if_else",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Did we find the room?",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity",
+                                        "blocks": [
+                                          {
+                                            "unique_name": "definition_activity_01SBKCO76S7KN39V8ko6myBa1GexW5ig8sW",
+                                            "name": "Condition Branch",
+                                            "title": "Room was found",
+                                            "type": "logic.condition_block",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "condition": {
+                                                "left_operand": "$activity.definition_activity_01SBKCBF72Q7N0noFHqs1FaS9DGdV78V75j.output.succeeded$",
+                                                "operator": "eq",
+                                                "right_operand": true
+                                              },
+                                              "continue_on_failure": false,
+                                              "display_name": "Room was found",
+                                              "skip_execution": false
+                                            },
+                                            "object_type": "definition_activity",
+                                            "actions": [
+                                              {
+                                                "unique_name": "definition_activity_01S8DOEWE10V37iNPeMTzWGPjFtO1GvtLfQ",
+                                                "name": "Webex Teams - Post Message to Room",
+                                                "title": "Webex Teams - Post Message to Room",
+                                                "type": "workflow.atomic_workflow",
+                                                "base_type": "subworkflow",
+                                                "properties": {
+                                                  "continue_on_failure": false,
+                                                  "display_name": "Webex Teams - Post Message to Room",
+                                                  "input": {
+                                                    "variable_workflow_01PP78DJH1TI76BYfsu9g0Tqj2S6cUxjtu5": "$activity.definition_activity_01SBKCBF72Q7N0noFHqs1FaS9DGdV78V75j.output.variable_workflow_01PP790MCXJ7Y5cAWcGZWbG4Es0126zb1I6$",
+                                                    "variable_workflow_01PP78DJH1XNQ7gNQ5iZdperRHqrppzARXC": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85A6B6ERBG6mw3rhRYed2F17VRm1McBp$",
+                                                    "variable_workflow_01PP78DJH1YWL3allalGQbg1VkgKwh9GvCi": "$activity.definition_activity_01S8CBD3NJJ5E3qX2hyN8AiiSPrTEViHh3k.output.script_queries.webex_formatted_message$\n\nThis event can be marked as clean in Crowdstrike.",
+                                                    "variable_workflow_01PP78DJH22BB3Ej3I8tJ4OCQur0unYGjj9": ""
+                                                  },
+                                                  "runtime_user": {
+                                                    "target_default": true
+                                                  },
+                                                  "skip_execution": false,
+                                                  "target": {
+                                                    "override_workflow_target": true,
+                                                    "target_id": "definition_target_01MGSJSDFBYFA3JxQSJVh0cj5dg0lSuHY81",
+                                                    "target_type": "web-service.endpoint"
+                                                  },
+                                                  "workflow_id": "definition_workflow_01PP78DJMXS415nTjonujf03ROkr6t2PNyw"
+                                                },
+                                                "object_type": "definition_activity"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01SB2GKZYYYDW2T5MSeq8H1XuZqgkHWNwfY",
+                            "name": "Set Variables",
+                            "title": "Clean Detections Counter",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Clean Detections Counter",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2E3OBOAMT7G6yeDbbzzZdJZsDzMhORR$",
+                                  "variable_value_new": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2E3OBOAMT7G6yeDbbzzZdJZsDzMhORR$ + 1"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01S8DLQER7CX10Jnioeff8a7UrafvYKWuxO",
+                        "name": "Condition Branch",
+                        "title": "Malicious/Suspicious Verdict",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": {
+                              "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                              "operator": "eq",
+                              "right_operand": "Malicious"
+                            },
+                            "operator": "or",
+                            "right_operand": {
+                              "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                              "operator": "eq",
+                              "right_operand": "Suspicious"
+                            }
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Malicious/Suspicious Verdict",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S9AJ5INTS7Q6Ng8ILFFhuhUDDteQ4Wwe2",
+                            "name": "TheHive - Create New Case for Malicious",
+                            "title": "TheHive - Create New Case for Malicious",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "TheHive - Create New Case for Malicious",
+                              "input": {
+                                "variable_workflow_01S48BS2WGY9D1B6QDMSCOlqCKFitftSpjo": "Crowdstrike_Malicious_File",
+                                "variable_workflow_01S48C9V8BAMS2o9fU7Wgcsx817TkNbNgoX": "$activity.definition_activity_01S8CN4KZ9B0J5vsfLvKzdvwfMf0oB9FDdD.output.script_queries.thehive_formatted_message$",
+                                "variable_workflow_01S48D564OH357Sf14jCy6aHXW4QyMHka1V": 3,
+                                "variable_workflow_01S48EKYW4NI2170SVTbw74ypy7SicFsLM6": 3,
+                                "variable_workflow_01SBO0DLOEJHI2G6iIyjZyKCIJjSYdGDMik": "http://10.207.217.60:9000"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target_group": true,
+                                "target_group_id": "01S6K0J74JG6660amBQbFDD4G9oHBi1tju0"
+                              },
+                              "workflow_id": "definition_workflow_01S7H5GT2YMRS3XWFQraLuQ5ioaXPfKdTZ7"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01S9ALCYKE2KR2PFFn0uNbeAtlvLw7n65LE",
+                            "name": "TheHive - Add IOC to Case for Malicious (hash)",
+                            "title": "TheHive - Add IOC to Case for Malicious (hash)",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "TheHive - Add IOC to Case for Malicious (hash)",
+                              "input": {
+                                "variable_workflow_01S7MI3F0UFDQ3bihctWQBB3kWCv0SO3RBk": "$activity.definition_activity_01S9AJ5INTS7Q6Ng8ILFFhuhUDDteQ4Wwe2.output.variable_workflow_01S48OHNDJ3YL2K5f2xTKa51a1h5mRjO8q0$",
+                                "variable_workflow_01S7MI3F0W2A95D9eXyRBesKcqWlA0T3aTl": 3,
+                                "variable_workflow_01S7MI3F0WT5R0Wt5ursCqeLza4i4tvnQlm": "### Malicious IOC",
+                                "variable_workflow_01S7MNEX7JQGY7XP1Hw8NvIy48L8sDzpQVZ": "hash",
+                                "variable_workflow_01S7MNUQMYX2Z5OSVVgc61GQP9ZeVDfR4vX": "$activity.definition_activity_01S86PZN3BDJG59pvpHL2qhwDOFumxqXx3i.input.source_array[@].ioc_value$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target_group": true,
+                                "target_group_id": "01S6K0J74JG6660amBQbFDD4G9oHBi1tju0"
+                              },
+                              "workflow_id": "definition_workflow_01S7MI3EUBZS01dlBvLVTn9byDPn1DBZy8k"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01SBRG9QAAOOP2GQSRcTFpq0jVLZ0FnXeyT",
+                            "name": "TheHive - Add IOC to Case for Malicious (filename)",
+                            "title": "TheHive - Add IOC to Case for Malicious (filename)",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "TheHive - Add IOC to Case for Malicious (filename)",
+                              "input": {
+                                "variable_workflow_01S7MI3F0UFDQ3bihctWQBB3kWCv0SO3RBk": "$activity.definition_activity_01S9AJ5INTS7Q6Ng8ILFFhuhUDDteQ4Wwe2.output.variable_workflow_01S48OHNDJ3YL2K5f2xTKa51a1h5mRjO8q0$",
+                                "variable_workflow_01S7MI3F0W2A95D9eXyRBesKcqWlA0T3aTl": 3,
+                                "variable_workflow_01S7MI3F0WT5R0Wt5ursCqeLza4i4tvnQlm": "### Malicious IOC",
+                                "variable_workflow_01S7MNEX7JQGY7XP1Hw8NvIy48L8sDzpQVZ": "filename",
+                                "variable_workflow_01S7MNUQMYX2Z5OSVVgc61GQP9ZeVDfR4vX": "$activity.definition_activity_01S86PZN3BDJG59pvpHL2qhwDOFumxqXx3i.input.source_array[@].filepath$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target_group": true,
+                                "target_group_id": "01S6K0J74JG6660amBQbFDD4G9oHBi1tju0"
+                              },
+                              "workflow_id": "definition_workflow_01S7MI3EUBZS01dlBvLVTn9byDPn1DBZy8k"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01SBRH5W80DLH7V0Fad656TRaJrQ7aBBgN4",
+                            "name": "TheHive - Add IOC to Case for Malicious (hostname)",
+                            "title": "TheHive - Add IOC to Case for Malicious (hostname)",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "TheHive - Add IOC to Case for Malicious (hostname)",
+                              "input": {
+                                "variable_workflow_01S7MI3F0UFDQ3bihctWQBB3kWCv0SO3RBk": "$activity.definition_activity_01S9AJ5INTS7Q6Ng8ILFFhuhUDDteQ4Wwe2.output.variable_workflow_01S48OHNDJ3YL2K5f2xTKa51a1h5mRjO8q0$",
+                                "variable_workflow_01S7MI3F0W2A95D9eXyRBesKcqWlA0T3aTl": 3,
+                                "variable_workflow_01S7MI3F0WT5R0Wt5ursCqeLza4i4tvnQlm": "### Malicious IOC",
+                                "variable_workflow_01S7MNEX7JQGY7XP1Hw8NvIy48L8sDzpQVZ": "hostname",
+                                "variable_workflow_01S7MNUQMYX2Z5OSVVgc61GQP9ZeVDfR4vX": "$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.hostname$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target_group": true,
+                                "target_group_id": "01S6K0J74JG6660amBQbFDD4G9oHBi1tju0"
+                              },
+                              "workflow_id": "definition_workflow_01S7MI3EUBZS01dlBvLVTn9byDPn1DBZy8k"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01SBNVA3STTMW7DKArOFs7xADzLNTOctwml",
+                            "name": "Group",
+                            "title": "Send Notification to IR Team",
+                            "type": "logic.group",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Send Notification to IR Team",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01SBKEZ79HYCJ4EgoMKw9CWlwYCzmtum1u2",
+                                "name": "Condition Block",
+                                "title": "Was Webex Room Provided?",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Was Webex Room Provided?",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01SBKEZ79IKH646h9MXlSGSXUqj1LNSkUMd",
+                                    "name": "Condition Branch",
+                                    "title": "Room Name was Provided",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SBK90F2YOWS18fj8UFJN6aobyZHAIgKkY$",
+                                        "operator": "ne",
+                                        "right_operand": ""
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "Room Name was Provided",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01SBKEZ79LK4L0FOdPqx2pbjoj0AjzfcweG",
+                                        "name": "Webex Teams - Search for Room",
+                                        "title": "Webex Teams - Search for Room",
+                                        "type": "workflow.atomic_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Webex Teams - Search for Room",
+                                          "input": {
+                                            "variable_workflow_01PP790MCX1DN3EitpQebkUyJS65DbwS3nU": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85A6B6ERBG6mw3rhRYed2F17VRm1McBp$",
+                                            "variable_workflow_01PP790MCXB392D3R8pxh9fgOTjTde2bcMW": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SBK90F2YOWS18fj8UFJN6aobyZHAIgKkY$",
+                                            "variable_workflow_01PP790MCXHP55YE6ylOEITWsWbUFJeyWGv": "",
+                                            "variable_workflow_01PP790MCXM9W1MUwo85y8iNRCoQuQ4RGNa": ""
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "override_workflow_target": true,
+                                            "target_id": "definition_target_01MGSJSDFBYFA3JxQSJVh0cj5dg0lSuHY81",
+                                            "target_type": "web-service.endpoint"
+                                          },
+                                          "workflow_id": "definition_workflow_01PP790MKJNWV6XyJuLdUyNlM2UV3JJACez"
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01SBKEZ79MZW80tFILpvkf94qK0CslejxTk",
+                                        "name": "Condition Block",
+                                        "title": "Did we find the room?",
+                                        "type": "logic.if_else",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Did we find the room?",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity",
+                                        "blocks": [
+                                          {
+                                            "unique_name": "definition_activity_01SBKEZ79OUCD4cj5QGDzyHjMiQLGTg1sWm",
+                                            "name": "Condition Branch",
+                                            "title": "Room was found",
+                                            "type": "logic.condition_block",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "condition": {
+                                                "left_operand": "$activity.definition_activity_01SBKEZ79LK4L0FOdPqx2pbjoj0AjzfcweG.output.succeeded$",
+                                                "operator": "eq",
+                                                "right_operand": true
+                                              },
+                                              "continue_on_failure": false,
+                                              "display_name": "Room was found",
+                                              "skip_execution": false
+                                            },
+                                            "object_type": "definition_activity",
+                                            "actions": [
+                                              {
+                                                "unique_name": "definition_activity_01SBKEZ79RTIM0HSrpLetLb5jq5vTK1mTUa",
+                                                "name": "Webex Teams - Post Message to Room",
+                                                "title": "Webex Teams - Post Message to Room",
+                                                "type": "workflow.atomic_workflow",
+                                                "base_type": "subworkflow",
+                                                "properties": {
+                                                  "continue_on_failure": false,
+                                                  "display_name": "Webex Teams - Post Message to Room",
+                                                  "input": {
+                                                    "variable_workflow_01PP78DJH1TI76BYfsu9g0Tqj2S6cUxjtu5": "$activity.definition_activity_01SBKEZ79LK4L0FOdPqx2pbjoj0AjzfcweG.output.variable_workflow_01PP790MCXJ7Y5cAWcGZWbG4Es0126zb1I6$",
+                                                    "variable_workflow_01PP78DJH1XNQ7gNQ5iZdperRHqrppzARXC": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85A6B6ERBG6mw3rhRYed2F17VRm1McBp$",
+                                                    "variable_workflow_01PP78DJH1YWL3allalGQbg1VkgKwh9GvCi": "$activity.definition_activity_01S8CBD3NJJ5E3qX2hyN8AiiSPrTEViHh3k.output.script_queries.webex_formatted_message$\n\nA new TheHive case was created, [click here]($activity.definition_activity_01S9AJ5INTS7Q6Ng8ILFFhuhUDDteQ4Wwe2.output.variable_workflow_01SBO1G4DRYS37Yrpf6AFFSlAQcUQhRwgyY$) to review it.",
+                                                    "variable_workflow_01PP78DJH22BB3Ej3I8tJ4OCQur0unYGjj9": ""
+                                                  },
+                                                  "runtime_user": {
+                                                    "target_default": true
+                                                  },
+                                                  "skip_execution": false,
+                                                  "target": {
+                                                    "override_workflow_target": true,
+                                                    "target_id": "definition_target_01MGSJSDFBYFA3JxQSJVh0cj5dg0lSuHY81",
+                                                    "target_type": "web-service.endpoint"
+                                                  },
+                                                  "workflow_id": "definition_workflow_01PP78DJMXS415nTjonujf03ROkr6t2PNyw"
+                                                },
+                                                "object_type": "definition_activity"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01SB2H7J6QXS36z0omiRclHhS6EcMfG1goW",
+                            "name": "Set Variables",
+                            "title": "Malicious Detections Counter and Cases Opened",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Malicious Detections Counter and Cases Opened",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2EIFYKGE161WK4AvLwnJUvIv42bCkxN$",
+                                  "variable_value_new": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2EIFYKGE161WK4AvLwnJUvIv42bCkxN$ + 1"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2ER0Q73FH4Xxfoa0FGAfsgMC1rhS9r8$",
+                                  "variable_value_new": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2ER0Q73FH4Xxfoa0FGAfsgMC1rhS9r8$ + 1"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      },
+                      {
+                        "unique_name": "definition_activity_01S8DNN19FEAB6F7IqzvAf28biXan3vM5FR",
+                        "name": "Condition Branch",
+                        "title": "Unknown Verdict",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S86P0S9S4IR7SpH8asIcNBQsIJFETQPdK$",
+                            "operator": "eq",
+                            "right_operand": "Unknown"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Unknown Verdict",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01S9AOPI9R8PD7AV4mC0nQ2Wi3OQrvqgOFM",
+                            "name": "TheHive - Create New Case for Unknown",
+                            "title": "TheHive - Create New Case for Unknown",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "TheHive - Create New Case for Unknown",
+                              "input": {
+                                "variable_workflow_01S48BS2WGY9D1B6QDMSCOlqCKFitftSpjo": "Crowdstrike_Unknown_File",
+                                "variable_workflow_01S48C9V8BAMS2o9fU7Wgcsx817TkNbNgoX": "$activity.definition_activity_01S8CN4KZ9B0J5vsfLvKzdvwfMf0oB9FDdD.output.script_queries.thehive_formatted_message$",
+                                "variable_workflow_01S48D564OH357Sf14jCy6aHXW4QyMHka1V": 1,
+                                "variable_workflow_01S48EKYW4NI2170SVTbw74ypy7SicFsLM6": 1,
+                                "variable_workflow_01SBO0DLOEJHI2G6iIyjZyKCIJjSYdGDMik": "http://10.207.217.60:9000"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target_group": true,
+                                "target_group_id": "01S6K0J74JG6660amBQbFDD4G9oHBi1tju0"
+                              },
+                              "workflow_id": "definition_workflow_01S7H5GT2YMRS3XWFQraLuQ5ioaXPfKdTZ7"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01SBRHUKIL2QU2IAlMu5OMWFnY28bh21eef",
+                            "name": "TheHive - Add IOC to Case for Malicious (hash)",
+                            "title": "TheHive - Add IOC to Case for Malicious (hash)",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "TheHive - Add IOC to Case for Malicious (hash)",
+                              "input": {
+                                "variable_workflow_01S7MI3F0UFDQ3bihctWQBB3kWCv0SO3RBk": "$activity.definition_activity_01S9AOPI9R8PD7AV4mC0nQ2Wi3OQrvqgOFM.output.variable_workflow_01S48OHNDJ3YL2K5f2xTKa51a1h5mRjO8q0$",
+                                "variable_workflow_01S7MI3F0W2A95D9eXyRBesKcqWlA0T3aTl": 3,
+                                "variable_workflow_01S7MI3F0WT5R0Wt5ursCqeLza4i4tvnQlm": "### Malicious IOC",
+                                "variable_workflow_01S7MNEX7JQGY7XP1Hw8NvIy48L8sDzpQVZ": "hash",
+                                "variable_workflow_01S7MNUQMYX2Z5OSVVgc61GQP9ZeVDfR4vX": "$activity.definition_activity_01S86PZN3BDJG59pvpHL2qhwDOFumxqXx3i.input.source_array[@].ioc_value$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target_group": true,
+                                "target_group_id": "01S6K0J74JG6660amBQbFDD4G9oHBi1tju0"
+                              },
+                              "workflow_id": "definition_workflow_01S7MI3EUBZS01dlBvLVTn9byDPn1DBZy8k"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01SBRI0ZMSORO64KbTG6kG5idnca9wGXkGM",
+                            "name": "TheHive - Add IOC to Case for Malicious (filename)",
+                            "title": "TheHive - Add IOC to Case for Malicious (filename)",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "TheHive - Add IOC to Case for Malicious (filename)",
+                              "input": {
+                                "variable_workflow_01S7MI3F0UFDQ3bihctWQBB3kWCv0SO3RBk": "$activity.definition_activity_01S9AOPI9R8PD7AV4mC0nQ2Wi3OQrvqgOFM.output.variable_workflow_01S48OHNDJ3YL2K5f2xTKa51a1h5mRjO8q0$",
+                                "variable_workflow_01S7MI3F0W2A95D9eXyRBesKcqWlA0T3aTl": 3,
+                                "variable_workflow_01S7MI3F0WT5R0Wt5ursCqeLza4i4tvnQlm": "### Malicious IOC",
+                                "variable_workflow_01S7MNEX7JQGY7XP1Hw8NvIy48L8sDzpQVZ": "filename",
+                                "variable_workflow_01S7MNUQMYX2Z5OSVVgc61GQP9ZeVDfR4vX": "$activity.definition_activity_01S86PZN3BDJG59pvpHL2qhwDOFumxqXx3i.input.source_array[@].filepath$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target_group": true,
+                                "target_group_id": "01S6K0J74JG6660amBQbFDD4G9oHBi1tju0"
+                              },
+                              "workflow_id": "definition_workflow_01S7MI3EUBZS01dlBvLVTn9byDPn1DBZy8k"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01SBRI4KTH6HI5HUqTB3aEyQbXbYRl9mLE9",
+                            "name": "TheHive - Add IOC to Case for Malicious (hostname)",
+                            "title": "TheHive - Add IOC to Case for Malicious (hostname)",
+                            "type": "workflow.atomic_workflow",
+                            "base_type": "subworkflow",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "TheHive - Add IOC to Case for Malicious (hostname)",
+                              "input": {
+                                "variable_workflow_01S7MI3F0UFDQ3bihctWQBB3kWCv0SO3RBk": "$activity.definition_activity_01S9AOPI9R8PD7AV4mC0nQ2Wi3OQrvqgOFM.output.variable_workflow_01S48OHNDJ3YL2K5f2xTKa51a1h5mRjO8q0$",
+                                "variable_workflow_01S7MI3F0W2A95D9eXyRBesKcqWlA0T3aTl": 3,
+                                "variable_workflow_01S7MI3F0WT5R0Wt5ursCqeLza4i4tvnQlm": "### Malicious IOC",
+                                "variable_workflow_01S7MNEX7JQGY7XP1Hw8NvIy48L8sDzpQVZ": "hostname",
+                                "variable_workflow_01S7MNUQMYX2Z5OSVVgc61GQP9ZeVDfR4vX": "$activity.definition_activity_01S7K20475HS92IEzUy3tVEmXAB7CNfMps5.output.jsonpath_queries.hostname$"
+                              },
+                              "runtime_user": {
+                                "target_default": true
+                              },
+                              "skip_execution": false,
+                              "target": {
+                                "execute_on_this_target_group": true,
+                                "target_group_id": "01S6K0J74JG6660amBQbFDD4G9oHBi1tju0"
+                              },
+                              "workflow_id": "definition_workflow_01S7MI3EUBZS01dlBvLVTn9byDPn1DBZy8k"
+                            },
+                            "object_type": "definition_activity"
+                          },
+                          {
+                            "unique_name": "definition_activity_01SBNVJZBCF8K4N6geWkxJelqEDB9j2HO8y",
+                            "name": "Group",
+                            "title": "Send Notification to IR Team",
+                            "type": "logic.group",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Send Notification to IR Team",
+                              "skip_execution": false
+                            },
+                            "object_type": "definition_activity",
+                            "actions": [
+                              {
+                                "unique_name": "definition_activity_01SBKFACWSSI16R83SQxS4dXrZkt9BIyXPs",
+                                "name": "Condition Block",
+                                "title": "Was Webex Room Provided?",
+                                "type": "logic.if_else",
+                                "base_type": "activity",
+                                "properties": {
+                                  "continue_on_failure": false,
+                                  "display_name": "Was Webex Room Provided?",
+                                  "skip_execution": false
+                                },
+                                "object_type": "definition_activity",
+                                "blocks": [
+                                  {
+                                    "unique_name": "definition_activity_01SBKFACWTCJJ1pvFwWf0tD8hUqOM8tRVBz",
+                                    "name": "Condition Branch",
+                                    "title": "Room Name was Provided",
+                                    "type": "logic.condition_block",
+                                    "base_type": "activity",
+                                    "properties": {
+                                      "condition": {
+                                        "left_operand": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SBK90F2YOWS18fj8UFJN6aobyZHAIgKkY$",
+                                        "operator": "ne",
+                                        "right_operand": ""
+                                      },
+                                      "continue_on_failure": false,
+                                      "display_name": "Room Name was Provided",
+                                      "skip_execution": false
+                                    },
+                                    "object_type": "definition_activity",
+                                    "actions": [
+                                      {
+                                        "unique_name": "definition_activity_01SBKFACWV9ST0Z47iV8w50gsYiOQja3g4e",
+                                        "name": "Webex Teams - Search for Room",
+                                        "title": "Webex Teams - Search for Room",
+                                        "type": "workflow.atomic_workflow",
+                                        "base_type": "subworkflow",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Webex Teams - Search for Room",
+                                          "input": {
+                                            "variable_workflow_01PP790MCX1DN3EitpQebkUyJS65DbwS3nU": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85A6B6ERBG6mw3rhRYed2F17VRm1McBp$",
+                                            "variable_workflow_01PP790MCXB392D3R8pxh9fgOTjTde2bcMW": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SBK90F2YOWS18fj8UFJN6aobyZHAIgKkY$",
+                                            "variable_workflow_01PP790MCXHP55YE6ylOEITWsWbUFJeyWGv": "",
+                                            "variable_workflow_01PP790MCXM9W1MUwo85y8iNRCoQuQ4RGNa": ""
+                                          },
+                                          "runtime_user": {
+                                            "target_default": true
+                                          },
+                                          "skip_execution": false,
+                                          "target": {
+                                            "override_workflow_target": true,
+                                            "target_id": "definition_target_01MGSJSDFBYFA3JxQSJVh0cj5dg0lSuHY81",
+                                            "target_type": "web-service.endpoint"
+                                          },
+                                          "workflow_id": "definition_workflow_01PP790MKJNWV6XyJuLdUyNlM2UV3JJACez"
+                                        },
+                                        "object_type": "definition_activity"
+                                      },
+                                      {
+                                        "unique_name": "definition_activity_01SBKFACWYRIH5e5q90wiZpegFOcOVbVJWM",
+                                        "name": "Condition Block",
+                                        "title": "Did we find the room?",
+                                        "type": "logic.if_else",
+                                        "base_type": "activity",
+                                        "properties": {
+                                          "continue_on_failure": false,
+                                          "display_name": "Did we find the room?",
+                                          "skip_execution": false
+                                        },
+                                        "object_type": "definition_activity",
+                                        "blocks": [
+                                          {
+                                            "unique_name": "definition_activity_01SBKFACWZFS555y0uDQrdPXjRJWuOZD5CS",
+                                            "name": "Condition Branch",
+                                            "title": "Room was found",
+                                            "type": "logic.condition_block",
+                                            "base_type": "activity",
+                                            "properties": {
+                                              "condition": {
+                                                "left_operand": "$activity.definition_activity_01SBKFACWV9ST0Z47iV8w50gsYiOQja3g4e.output.succeeded$",
+                                                "operator": "eq",
+                                                "right_operand": true
+                                              },
+                                              "continue_on_failure": false,
+                                              "display_name": "Room was found",
+                                              "skip_execution": false
+                                            },
+                                            "object_type": "definition_activity",
+                                            "actions": [
+                                              {
+                                                "unique_name": "definition_activity_01SBKFACX2AGE2hAHlou77akTnyHfZeeZ3y",
+                                                "name": "Webex Teams - Post Message to Room",
+                                                "title": "Webex Teams - Post Message to Room",
+                                                "type": "workflow.atomic_workflow",
+                                                "base_type": "subworkflow",
+                                                "properties": {
+                                                  "continue_on_failure": false,
+                                                  "display_name": "Webex Teams - Post Message to Room",
+                                                  "input": {
+                                                    "variable_workflow_01PP78DJH1TI76BYfsu9g0Tqj2S6cUxjtu5": "$activity.definition_activity_01SBKFACWV9ST0Z47iV8w50gsYiOQja3g4e.output.variable_workflow_01PP790MCXJ7Y5cAWcGZWbG4Es0126zb1I6$",
+                                                    "variable_workflow_01PP78DJH1XNQ7gNQ5iZdperRHqrppzARXC": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01S85A6B6ERBG6mw3rhRYed2F17VRm1McBp$",
+                                                    "variable_workflow_01PP78DJH1YWL3allalGQbg1VkgKwh9GvCi": "$activity.definition_activity_01S8CBD3NJJ5E3qX2hyN8AiiSPrTEViHh3k.output.script_queries.webex_formatted_message$\n\nA new TheHive case was created, [click here]($activity.definition_activity_01S9AOPI9R8PD7AV4mC0nQ2Wi3OQrvqgOFM.output.variable_workflow_01SBO1G4DRYS37Yrpf6AFFSlAQcUQhRwgyY$) to review it.",
+                                                    "variable_workflow_01PP78DJH22BB3Ej3I8tJ4OCQur0unYGjj9": ""
+                                                  },
+                                                  "runtime_user": {
+                                                    "target_default": true
+                                                  },
+                                                  "skip_execution": false,
+                                                  "target": {
+                                                    "override_workflow_target": true,
+                                                    "target_id": "definition_target_01MGSJSDFBYFA3JxQSJVh0cj5dg0lSuHY81",
+                                                    "target_type": "web-service.endpoint"
+                                                  },
+                                                  "workflow_id": "definition_workflow_01PP78DJMXS415nTjonujf03ROkr6t2PNyw"
+                                                },
+                                                "object_type": "definition_activity"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "unique_name": "definition_activity_01SB2H8RTSRG03LlK8V9PpZXRoUhESaLMmP",
+                            "name": "Set Variables",
+                            "title": "Unknown Detections Counter and Cases Opened",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Unknown Detections Counter and Cases Opened",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2EWC0KLN76xqzkZbxWYLHu90YvfaoA3$",
+                                  "variable_value_new": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2EWC0KLN76xqzkZbxWYLHu90YvfaoA3$ + 1"
+                                },
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2ER0Q73FH4Xxfoa0FGAfsgMC1rhS9r8$",
+                                  "variable_value_new": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2ER0Q73FH4Xxfoa0FGAfsgMC1rhS9r8$ + 1"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01SB2JLTGHP4N6eSB7KuRiMxgUOeBLI6XEU",
+        "name": "Set Variables",
+        "title": "Final Statistics",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Final Statistics",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2K6P3H31K6zy5OK2yTjrQU5DcBaVWXh$",
+              "variable_value_new": "Statistics:\nAmount of detections: $activity.definition_activity_01S86B6H7TDBZ3iUSPUc2dVC8NH92KvqmnK.output.row_count$\nClean detections: $workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2E3OBOAMT7G6yeDbbzzZdJZsDzMhORR$\nMalicious detections: $workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2EIFYKGE161WK4AvLwnJUvIv42bCkxN$\nUnknown detections: $workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2EWC0KLN76xqzkZbxWYLHu90YvfaoA3$\nTheHive cases opened: $workflow.definition_workflow_01S7JPWVFNNJY2Ih5Eoqty5LKwGLHTzGyVY.local.variable_workflow_01SB2ER0Q73FH4Xxfoa0FGAfsgMC1rhS9r8$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_01MGSJSDFBYFA3JxQSJVh0cj5dg0lSuHY81": {
+      "unique_name": "definition_target_01MGSJSDFBYFA3JxQSJVh0cj5dg0lSuHY81",
+      "name": "Webex Teams",
+      "title": "Webex Teams",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "description": "Webex Teams",
+        "disable_certificate_validation": false,
+        "display_name": "Webex Teams",
+        "host": "webexapis.com",
+        "no_runtime_user": true,
+        "port": 443,
+        "protocol": "https"
+      }
+    },
+    "definition_target_01S2E5QKUU0HW1gK2tosEknKKpL75HqjB6Q": {
+      "unique_name": "definition_target_01S2E5QKUU0HW1gK2tosEknKKpL75HqjB6Q",
+      "name": "HHC Crowdstrike",
+      "title": "HHC Crowdstrike",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "description": "NYC HHC Crowdstrike Endpoint",
+        "disable_certificate_validation": false,
+        "display_name": "HHC Crowdstrike",
+        "host": "api.crowdstrike.com",
+        "ignore_proxy": false,
+        "no_runtime_user": true,
+        "protocol": "https"
+      }
+    },
+    "definition_target_01S35IANTGTZP5pT0bcdtXK88fgkexVq9Id": {
+      "unique_name": "definition_target_01S35IANTGTZP5pT0bcdtXK88fgkexVq9Id",
+      "name": "HHC Cisco Threat Response API",
+      "title": "HHC Cisco Threat Response API",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "description": "HHC Cisco Threat Response API",
+        "disable_certificate_validation": false,
+        "display_name": "HHC Cisco Threat Response API",
+        "host": "visibility.amp.cisco.com",
+        "ignore_proxy": false,
+        "no_runtime_user": true,
+        "path": "/iroh",
+        "protocol": "https"
+      }
+    },
+    "definition_target_01S36WOCOGKNS5ZkcNXP0gkbm0ISZN6dAMQ": {
+      "unique_name": "definition_target_01S36WOCOGKNS5ZkcNXP0gkbm0ISZN6dAMQ",
+      "name": "HHC Cisco Threat Response API - Authentication",
+      "title": "HHC Cisco Threat Response API - Authentication",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_01S35I8SH9BZD62Rmd41mh67MwPg8NCh4FL",
+        "disable_certificate_validation": false,
+        "display_name": "HHC Cisco Threat Response API - Authentication",
+        "host": "visibility.amp.cisco.com",
+        "ignore_proxy": false,
+        "no_runtime_user": false,
+        "path": "/iroh",
+        "protocol": "https"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_01S2E7LAP69WI2uZApfilzLhehIBL0psww9": {
+      "unique_name": "definition_runtime_user_01S2E7LAP69WI2uZApfilzLhehIBL0psww9",
+      "name": "HHC Crowdstrike API Credentials",
+      "title": "HHC Crowdstrike API Credentials",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "display_name": "HHC Crowdstrike API Credentials"
+      }
+    },
+    "definition_runtime_user_01S35I8SH9BZD62Rmd41mh67MwPg8NCh4FL": {
+      "unique_name": "definition_runtime_user_01S35I8SH9BZD62Rmd41mh67MwPg8NCh4FL",
+      "name": "HHC Cisco Threat Response API Keys",
+      "title": "HHC Cisco Threat Response API Keys",
+      "type": "runtime_user.web-service_basic_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "auth_option": "*****",
+        "basic_password": "*****",
+        "basic_username": "*****",
+        "display_name": "HHC Cisco Threat Response API Keys"
+      }
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_01PP75S3LTBW4420OZU3rdHWKHFnE6aC7yH",
+    "definition_workflow_01PP77MLQ4QAG765OwlT0ZDqBzv80HvYuPC",
+    "definition_workflow_01S7H5GT2YMRS3XWFQraLuQ5ioaXPfKdTZ7",
+    "definition_workflow_01S7MI3EUBZS01dlBvLVTn9byDPn1DBZy8k",
+    "definition_workflow_01PP790MKJNWV6XyJuLdUyNlM2UV3JJACez",
+    "definition_workflow_01PP78DJMXS415nTjonujf03ROkr6t2PNyw"
+  ]
+}
